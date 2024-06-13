@@ -6,12 +6,13 @@ const studentRoutes = require('./routes/studentRoutes');
 const app = express();
 const port = 3000;
 
-// Kết nối đến MongoDB Atlas
+
+// Kết nối đến MongoDB
 mongoose.connect('mongodb://127.0.0.1:27017/SinhVien', {
 }).then(() => {
-  console.log('Connected to MongoDB Atlas');
+  console.log('Connected to MongoDB');
 }).catch((error) => {
-  console.error('Error connecting to MongoDB Atlas:', error);
+  console.error('Error connecting to MongoDB:', error);
 });
 
 app.use(bodyParser.json());
